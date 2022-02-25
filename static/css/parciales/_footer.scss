@@ -1,0 +1,79 @@
+/*CSS PARA EL FOOTER*/
+
+.footer{
+    grid-area: footer;
+    display: grid;
+    grid-template: 
+            "footer__superior" 300px
+            "footer__inferior" 50px /
+            auto;
+}
+
+
+.footer__superior{
+    grid-area: footer__superior;
+    align-content: center;
+    justify-content: space-evenly;
+    background: #0f0c29;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #24243e, #302b63, #0f0c29); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    display: grid;
+    grid-template: "footer__izquierdo footer__derecho" auto / auto;
+}
+
+.footer__izquierdo {
+    margin-right: 0px;
+}
+
+.footer__derecho {
+    text-align: left;
+}
+
+.footer__izquierdo, .footer__derecho {
+    justify-self: center;
+}
+
+.footer__izquierdo a{
+    font-size: 36px;
+    color: #d9d9d9;
+    font-weight: 700;
+    margin-bottom: 18px;
+}
+
+.footer__izquierdo div a{
+    margin-right: 15px;
+    font-size: 15px;
+    color: #fff;
+}
+
+.footer__izquierdo p {
+    color: #c4c4c4;
+    line-height: 24px;
+    -margin-bottom: 20px;
+    text-align: justify;
+    width: 400px;
+}
+
+.footer__inferior{
+    grid-area: footer__inferior;
+    background: #0f0c29;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #24243e, #302b63, #0f0c29); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    display: flex;
+    align-items: center;
+    border-top: 1px solid #396888;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.footer__izquierdo {
+    grid-area: footer__izquierdo;
+}
+
+.footer__derecho {
+    grid-area: footer__derecho;
+}
+
+.footer__derecho h1, .footer__derecho h3{
+    color: #d9d9d9;
+}

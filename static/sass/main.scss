@@ -1,0 +1,266 @@
+@import "../css/parciales/cuerpo";
+@import "../css/parciales/footer";
+@import "../css/parciales/generales";
+@import "../css/parciales/responsive";
+
+/*CSS PARA EL HEADER*/
+.header{
+    background: #396afc;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #2948ff, #396afc);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #2948ff, #396afc); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    grid-area: header;
+    display: grid;
+    grid-template: 
+            "header__superior" auto
+            "header__inferior" auto /
+            auto;
+    
+            .header__superior{
+                grid-area: header__superior;
+                display: grid;
+                grid-template: 
+                        "header__superior-izquierda header__superior-derecha" auto /
+                        auto;
+
+                        .header__superior-izquierda{
+                            grid-area: header__superior-izquierda;
+                            display: grid;
+                            grid-template: 
+                                    "izquierda__info derecha__info" auto /
+                                    auto;
+                        }
+                        
+                        .header__superior-derecha{
+                            grid-area: header__superior-derecha;
+                            display: grid;
+                            grid-template: 
+                                    "izquierda__info derecha__info" auto /
+                                    auto;
+
+                                    .derecha__info.centrar.derecha {
+                                        margin: auto;
+                                    }
+                        }
+            }
+            
+            .header__inferior{
+                grid-area: header__inferior;
+                display: grid;
+                grid-template: 
+                        "logo__izquierda nav__derecha" auto /
+                        auto;
+
+                        .logo__izquierda.centrar{
+                            grid-area: logo__izquierda;
+                            -margin-right: 450px;
+                            padding-top: 18px;
+
+                            a {
+                                display: inline-block;
+                            }
+
+                            a img{
+                                max-width: 70%;
+                                vertical-align: middle;
+                                border-style: none;
+                            }
+                        }
+
+                        .nav__derecha{
+                            grid-area: nav__derecha;
+                        }
+                        
+                        .nav__derecha.centrar{
+                            width: 100%;
+                            top: 0;
+                            left: 0;
+                            align-self: center;
+
+                            .nav {
+                                display: flex;
+                                justify-content: center;
+
+                                .nav__menu{
+                                    display: flex;
+                                    margin-right: 40px;
+                                    list-style: none;
+
+                                    .nav__menuItem {
+                                        font-size: 15px;
+                                        margin: 0 10px;
+                                        text-transform: uppercase;
+                                        width: max-width;
+
+                                        .nav__menuLink {
+                                            padding: 8px 12px;
+                                            border-radius: 3px;
+                                        }
+
+                                        .nav__menuLink:hover{
+                                            background-color:#acc5d6;
+                                            transition: 0.5s;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+            }
+                 
+            .logo__izquierda_arriba{
+                grid-area: logo__izquierda_arriba;
+                display: none;
+
+                a{
+                    display: inline-block;
+                }
+
+                a img{
+                    max-width: 70%;
+                    vertical-align: middle;
+                    border-style: none;
+                }
+            }
+
+            .logo__izquierda_arriba.centrar {
+                padding-top: 18px;
+            }
+            
+            
+}
+
+
+/*CSS GENERALES*/
+
+article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
+    display: block;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #4c57d6;
+}
+
+p {
+    font-size: 15px;
+    font-family: "Montserrat", sans-serif;
+    color: #444444;
+    font-weight: 400;
+    line-height: 26px;
+    margin: 0 0 15px 0;
+}
+
+.primary-btn {
+    display: inline-block;
+    font-size: 15px;
+    padding: 14px 30px 12px;
+    color: #ffffff;
+    background: #4c57d6;
+    text-transform: uppercase;
+    font-weight: 700;
+    border-radius: 50px;
+}
+
+.container {
+    max-width: 1170px;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+
+
+.izquierda__info.centrar {
+    grid-area: izquierda__info;
+    padding-top: 18px;
+
+    a{
+        display: inline-block;
+        font-size: 18px;
+        margin-right: 26px;
+        -text-decoration: none;
+    }
+}
+
+.izquierda__info.centrar a.mar-cero{
+    margin-right: 0px;
+}
+
+.centrar{
+    padding-top: 18px;
+}
+
+.derecha__info {
+    grid-area: derecha__info;
+    margin-right: auto;
+}
+
+.izquierda__info.medio {
+    padding-top: 25px;
+    margin-left: auto;
+}
+
+.izquierda__info.centrar .num__center{
+    margin-right: 0px;
+}
+
+.izquierda__info.centrar span{
+    height: 30px;
+    width: 30px;
+    background: rgba(162, 171, 221, 0.644);
+    border-radius: 50%;
+    line-height: 30px;
+    text-align: center;
+    display: inline-block;
+    margin-right: 5px;
+    color: #fff;
+
+}
+
+.derecha__info.centrar  span {
+    height: 30px;
+    width: 30px;
+    background: rgba(162, 171, 221, 0.644);
+    border-radius: 50%;
+    line-height: 30px;
+    text-align: center;
+    display: inline-block;
+    margin-right: 5px;
+    color: #fff;
+    list-style: none;
+}
+
+.fa-envelope:before {
+    content: "\f0e0";
+}
+
+span {
+    color: #f8f9fa;
+}
+
+a {
+    color: #d9d9d9;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+.nav-toggle {
+    color: white;
+    background: none;
+    border: none;
+    font-size: 30px;
+    padding: 0 20px;
+    line-height: 60px;
+    display: none;
+}
+
+.grid-container{
+    display: grid;
+    -gap: 10px;
+    grid-template: 
+            "header" auto
+            "main"   auto
+            "footer" auto /
+            auto;
+}
+
