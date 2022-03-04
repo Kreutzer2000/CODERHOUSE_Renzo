@@ -332,19 +332,6 @@ img {
     list-style: none;
 }
 
-.precio__item:hover .primary-btn {
-    background: #4c57d6;
-    color: #ffffff;
-}
-
-.precio__item .primary-btn {
-    color: #111111;
-    background: #f2f2f2;
-    display: block;
-    transition: all 0.3s;
-    padding: 14px 0 12px;
-}
-
 .section__new {
     padding-top: 50px;
     padding-bottom: 50px;
@@ -487,26 +474,30 @@ img {
     height: 550px;
 }
 
-.contact__info__text .header__redes a.facebook {
-    color: #3263af;
+$redes: ( /*Mapa*/
+        facebook: #3263af,
+        instragram: #b309d7,
+        linkedin: #3263af,
+        twitter: #40c4ff
+); 
+/*Bucle para usar los valores del mapa*/
+@each $red, $color in $redes {
+   .contact__info__text .header__redes a.#{$red} {
+       background-color: $color;
+   }
 }
 
-.contact__info__text .header__redes a.instragram {
-    color: #b309d7;
-}
+$redes_a: ( /*map-get Redes*/
+  mostrar: inline-block,
+  texto_fuente: 30px,
+  margen_derecha: 26px
+);
 
-.contact__info__text .header__redes a.linkedin {
-    color: #3263af;
-}
-
-.contact__info__text .header__redes a.twitter {
-    color: #40c4ff;
-}
-
+/*General map-get Redes*/
 .contact__info__text .header__redes a {
-    display: inline-block;
-    font-size: 30px;
-    margin-right: 26px;
+  display: map-get($redes_a, mostrar);
+  font-size: map-get($redes_a, texto_fuente);
+  margin-right: map-get($redes_a, margen_derecha);
 }
 
 .send__message {

@@ -282,17 +282,6 @@ img {
   line-height: 40px;
   list-style: none; }
 
-.precio__item:hover .primary-btn {
-  background: #4c57d6;
-  color: #ffffff; }
-
-.precio__item .primary-btn {
-  color: #111111;
-  background: #f2f2f2;
-  display: block;
-  transition: all 0.3s;
-  padding: 14px 0 12px; }
-
 .section__new {
   padding-top: 50px;
   padding-bottom: 50px; }
@@ -416,18 +405,20 @@ img {
   width: 750px;
   height: 550px; }
 
+/*Bucle para usar los valores del mapa*/
 .contact__info__text .header__redes a.facebook {
-  color: #3263af; }
+  background-color: #3263af; }
 
 .contact__info__text .header__redes a.instragram {
-  color: #b309d7; }
+  background-color: #b309d7; }
 
 .contact__info__text .header__redes a.linkedin {
-  color: #3263af; }
+  background-color: #3263af; }
 
 .contact__info__text .header__redes a.twitter {
-  color: #40c4ff; }
+  background-color: #40c4ff; }
 
+/*General map-get Redes*/
 .contact__info__text .header__redes a {
   display: inline-block;
   font-size: 30px;
@@ -1030,15 +1021,49 @@ p {
   line-height: 26px;
   margin: 0 0 15px 0; }
 
-.primary-btn {
+.primary-btn, .precio__item:hover .boton--basic, .precio__item:hover .boton--medium, .precio__item:hover .boton--premiun, .precio__item .boton--basic, .precio__item .boton--medium, .precio__item .boton--premiun {
   display: inline-block;
   font-size: 15px;
-  padding: 14px 30px 12px;
+  padding: 14px 120px 12px;
   color: #ffffff;
   background: #4c57d6;
   text-transform: uppercase;
   font-weight: 700;
   border-radius: 50px; }
+
+/*EXTENDS*/
+.precio__item:hover .boton--basic {
+  background: #4c57d6;
+  color: #ffffff; }
+
+.precio__item:hover .boton--medium {
+  background: #83BA18;
+  color: #ffffff; }
+
+.precio__item:hover .boton--premiun {
+  background: #C7465A;
+  color: #ffffff; }
+
+.precio__item .boton--basic {
+  color: #111111;
+  background: #f2f2f2;
+  display: block;
+  transition: all 0.3s;
+  padding: 14px 0 12px; }
+
+.precio__item .boton--medium {
+  color: #111111;
+  background: #f2f2f2;
+  display: block;
+  transition: all 0.3s;
+  padding: 14px 0 12px; }
+
+.precio__item .boton--premiun {
+  color: #111111;
+  background: #f2f2f2;
+  display: block;
+  transition: all 0.3s;
+  padding: 14px 0 12px; }
 
 .container {
   max-width: 1170px;
@@ -1060,6 +1085,7 @@ p {
 .izquierda__info.centrar a.mar-cero {
   margin-right: 0px; }
 
+/*MIXIN*/
 .centrar {
   padding-top: 18px; }
 

@@ -151,12 +151,57 @@ p {
 .primary-btn {
     display: inline-block;
     font-size: 15px;
-    padding: 14px 30px 12px;
+    padding: 14px 120px 12px;
     color: #ffffff;
     background: #4c57d6;
     text-transform: uppercase;
     font-weight: 700;
     border-radius: 50px;
+}
+/*EXTENDS*/
+.precio__item:hover .boton--basic{
+	@extend .primary-btn;
+	background: #4c57d6;
+    color: #ffffff;
+}
+
+.precio__item:hover .boton--medium{
+	@extend .primary-btn;
+	background:#83BA18;
+	color: #ffffff;
+}
+
+.precio__item:hover .boton--premiun{
+	@extend .primary-btn;
+	background:#C7465A;
+	color: #ffffff;
+}
+
+.precio__item .boton--basic {
+    @extend .primary-btn;
+    color: #111111;
+    background: #f2f2f2;
+    display: block;
+    transition: all 0.3s;
+    padding: 14px 0 12px;
+}
+
+.precio__item .boton--medium {
+    @extend .primary-btn;
+    color: #111111;
+    background: #f2f2f2;
+    display: block;
+    transition: all 0.3s;
+    padding: 14px 0 12px;
+}
+
+.precio__item .boton--premiun {
+    @extend .primary-btn;
+    color: #111111;
+    background: #f2f2f2;
+    display: block;
+    transition: all 0.3s;
+    padding: 14px 0 12px;
 }
 
 .container {
@@ -186,9 +231,13 @@ p {
     margin-right: 0px;
 }
 
-.centrar{
-    padding-top: 18px;
-}
+/*MIXIN*/
+@mixin centro($padding-top) {
+    padding-top: $padding-top;
+ }
+ .centrar {
+    @include centro(18px);
+ }
 
 .derecha__info {
     grid-area: derecha__info;
